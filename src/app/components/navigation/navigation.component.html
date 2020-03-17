@@ -1,0 +1,62 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/">Angular Photos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/photos">Mis fotos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/photos/new">Subir foto</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+  -->
+<header class="cabecera">
+    <div class="contenedor">
+        <div class="navegador">
+            <h1 class="logo"><a routerLink="/">LLSOC</a></h1>
+            <nav>
+                <ul>
+                    <li class="active"><a  routerLink="/photos" routerLinkActive="router-link-active">Mis fotos</a></li>
+                    <li><a  routerLink="/photos/new" routerLinkActive="router-link-active">Subir foto</a></li>
+                    <li><a class="nav-link" [routerLink]="['/tasks']" routerLinkActive="router-link-active">Tasks</a></li>
+                    <li><a class="nav-link" [routerLink]="['/private']" routerLinkActive="router-link-active">Private</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="navegador">
+            <div class="submit-buscador">
+                <form action="llibres.html" oninput="formAction()" method="GET"> 
+                    <input class= "buscar" name="q" type="search" placeholder="Buscar llibres"/>
+                  <button class="lente" type="submit">
+                      <i class="cuadrado-lente fas fa-search"></i>
+                  </button>
+                </form>
+            </div>  
+            <div class="buscador">
+              <ng-container *ngIf="!authService.loggedIn(); else loggedIn">
+                     <a class="icon-perfil circle" [routerLink]="['/signin']" routerLinkActive="router-link-active">
+                            <i class="fas fa-sign-in-alt"></i></a>
+                        <a class="icon-perfil circle" [routerLink]="['/signup']" routerLinkActive="router-link-active">
+                            <i class="fas fa-user-plus"></i></a>
+                        </ng-container>
+                    <ng-template #loggedIn>
+                            <a href="#" class="icon-cistella circle "><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#" class="icon-perfil circle"><i class="fas fa-user"></i></a>
+                                <a class="icon-perfil circle" style="cursor: pointer" (click)="authService.logout()">
+                                <i class="fas fa-sign-out-alt"></i></a>
+                    </ng-template>
+            </div>
+        </div>
+    </div>
+</header>
+
+ 

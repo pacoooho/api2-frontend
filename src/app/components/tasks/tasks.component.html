@@ -1,0 +1,55 @@
+<p>tasks works!</p>
+ 
+ 
+
+    <div   class="row">
+        <svg-widget></svg-widget>
+
+        <app-progress [value]="progress | async"></app-progress>
+        <!-- <svg4></svg4> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="70" height="60" viewBox="0 0 50 60">
+            <g app-svg2 [name_1]='name_1' [name_2]='name_2' [circle_center_x]='circle_center_x' [r]='r'></g>
+        </svg>
+        <app-progress [value]="progress2 | async"></app-progress>
+
+        <table id="contentToConvert">  
+            <tr>  
+              <th>Column1</th>  
+              <th>Column2</th>  
+              <th>Column3</th>  
+            </tr>  
+            <tr>  
+              <td>Row 1</td>  
+              <td>Row 1</td>  
+              <td>Row 1</td>  
+            </tr>  
+            <tr>  
+              <td>Row 2</td>  
+              <td>Row 2</td>  
+              <td>Row 2</td>  
+            </tr>  
+            <tr>  
+              <td>Row 3</td>  
+              <td>Row 3</td>  
+              <td>Row 3</td>  
+            </tr>  
+            <tr>  
+              <td>Row 4</td>  
+              <td>Row 4</td>  
+              <td>Row 4</td>  
+            </tr>  
+            <tr>  
+              <td>Row 5</td>  
+              <td>Row 5</td>  
+              <td>Row 5</td>  
+            </tr>  
+            <tr>  
+              <td>Row 6</td>  
+              <td>Row 6</td>  
+              <td>Row 6</td>  
+            </tr>  
+          </table>  
+    </div>
+    <button (click)="downloadPDF()">Export To PDF</button>
+
+ 

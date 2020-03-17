@@ -1,0 +1,71 @@
+
+.contenedor {
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 15px; }
+
+
+    @media (min-width: 768px) {
+        .contenedor {
+          width: 750px; } }
+      
+      @media (min-width: 992px) {
+        .contenedor {
+          width: 970px; }
+        }
+
+        @media (min-width: 1200px) {
+            .contenedor {
+              width: 1200px; } }
+          
+/*  */
+
+.pie {
+    background-color: crimson;
+    color: white; }
+    .pie {
+        padding: 30px 0; }
+        @media (min-width: 768px) {
+          .pie {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: start;
+            -webkit-justify-content: flex-start;
+                -ms-flex-pack: start;
+                    justify-content: flex-start;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap; } }
+        @media (min-width: 768px) {
+          .pie .logo-peu {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+            -webkit-justify-content: space-between;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+                -ms-flex-align: center;
+                    align-items: center; } }
+        .pie .logo-peu .logoUOC {
+          max-width: 222px;
+          margin: 0 auto; }
+          @media (min-width: 768px) {
+            .pie .logo-peu .logoUOC {
+              margin: 0; } }
+        .pie .logo-peu .autor-pagina {
+          text-align: center;
+          display: block;
+          margin-top: 20px; }
+          @media (min-width: 768px) {
+            .pie .logo-peu .autor-pagina {
+              margin: 0; } }

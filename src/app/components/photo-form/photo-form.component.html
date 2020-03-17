@@ -1,0 +1,35 @@
+<div class="col-lg-4 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            Upload a Photo
+        </div>
+        <div class="card-body">
+            <form (submit)="uploadPhoto(title, description)">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Photo's Title" #title required>
+                </div>
+                <div><p>{{typeForm}}</p></div>
+
+                <div class="form-group">
+                    <textarea rows="2" class="form-control" placeholder="Photo's Description" required
+                        #description></textarea>
+                </div>
+                <input type="file" class="d-none" (change)="onPhotoSelected($event)" #photoInput>
+                <img *ngIf="!photoSelected ; else elsePNG" [src]="'assets/no-image.png'" class="img-fluid"
+                    alt="No imagess" (click)="photoInput.click()">
+                <ng-template #elsePNG>
+                    <img *ngIf="typeForm == 'img'; else elseBlock" [src]="photoSelected" class="img-fluid"
+                    (click)="photoInput.click()">
+                </ng-template>
+                <ng-template #elseBlock>
+                    <video loop muted="muted" autoplay class="img-fluid"  (click)="photoInput.click()">
+                        <source [src]="photoSelected" [type]="typeForm">mp4
+                    </video>
+                </ng-template>
+                <button class="btn btn-primary btn-block">
+                    Upload
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
